@@ -38,7 +38,7 @@ class UsersController < ApplicationController
     redirect to '/tweets'
   end
   
-  get '/logout' do
+  post '/logout' do
     if logged_in?
      logout!
      redirect to '/login'
