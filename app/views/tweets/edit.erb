@@ -1,0 +1,19 @@
+<div class="col-md-4">
+  <div class="card">
+    <div class="card-header">
+        <h1 class="card-title text-primary">Edit Your Tweet</h1>
+    </div>
+    <div class="card-body">
+      <form class="" action="/tweets/<%= @tweet.id %>" method="POST">
+        <input type="hidden" id="hidden" name="_method" value="patch">
+        <div class="form-group">
+          <textarea class="form-control form-control-lg" id="content" name="content" rows="4" cols="50"><%=@tweet.content%></textarea>
+        </div>
+        <div class="row">
+          <div class="col"><input class="btn btn-outline-success btn-lg btn-block" type="submit" id="submit" value="Edit Tweet"></div>
+          <div class="col"><button class="btn btn-outline-secondary btn-lg btn-block" type="button"><a href="/tweets/<%=@tweet.id%>" class="card-link text-secondary">Cancel</a></button></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="col-md-6 text-center justify-content-center">
+  <% if flash[:message] %>
+  <div class="alert alert-success">
+    <%=flash[:message]%>
+  </div>
+  <% end %>
+  <div class="card">
+    <div class="card-header">
+      <h1 class="card-title"><%=@tweet.content%></h1>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col">
+          <form class="" action="/tweets/<%=@tweet.id%>" method="POST">
+            <input type="hidden" id="hidden" name="_method" value="delete">
+            <input type="submit" class="btn btn-outline-danger btn-lg btn-block" value="Delete Tweet">
+          </form>
+        </div>
+        <div class="col">
+          <a href="/tweets/<%=@tweet.id%>/edit" class="btn btn-outline-primary btn-lg btn-block">Edit Tweet</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

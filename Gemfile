@@ -11,6 +11,12 @@ gem 'shotgun'
 gem 'pry'
 gem 'bcrypt'
 gem "tux"
+gem "bootstrap"
+gem "sinatra-flash"
+gem 'jquery'
+gem 'date'
+gem 'sysrandom'
+gem 'slug'
 
 group :test do
   gem 'rspec'
