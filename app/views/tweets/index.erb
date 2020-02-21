@@ -1,0 +1,23 @@
+<div class="col-md-8 text-primary text-center">
+  <% if flash[:message] %>
+  <div class="alert alert-danger">
+    <%=flash[:message]%>
+  </div>
+  <% end %>
+  <div class="card">
+    <div class="card-header">
+      <h1 class="card-title">Welcome, <%=current_user.username.capitalize%></h1>
+      <h6 class="card-subtitle mb-2 text-muted">Here are all the tweets so far</h6>
+    </div>
+    <ul class="list-group">
+      <% Tweet.all.each do |tweet| %>
+        <li class="list-group-item">
+          <blockquote class="blockquote mb-0">
+            <a href="/tweets/<%= tweet.id %>" class="card-link"><%=tweet.content%></a>
+            <footer class="blockquote-footer">Created by <cite><%=tweet.user.slug%></cite></footer>
+          </blockquote>
+        </li>
+      <% end %>
+      </ul>
+    </div>
+</div>
