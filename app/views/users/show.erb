@@ -1,0 +1,29 @@
+<div class="col-md-8 text-primary text-center">
+<% if @user.tweets.empty? %>
+  <div>
+    <% if @user==current_user %>
+      <h1>You have no tweets yet. Start tweeting <a class="nav-link" href="/tweets/new">here.</a></h1>
+    <% else %>
+      <h1>@user has no tweets yet!</h1>
+    <% end %>
+  </div>
+<% else %>
+<div class="card">
+  <div class="card-header">
+    <h1 class="card-title"><%=@user.username.capitalize%> Tweets!</h1>
+  </div>
+  <ul class="list-group">
+  <% @user.tweets.each do |tweet| %>
+    <li class="list-group-item">
+      <blockquote class="blockquote mb-0">
+        <a href="/tweets/<%= tweet.id %>" class="card-link"><%=tweet.content%></a>
+        <footer class="blockquote-footer">Created by <cite><%=current_user.slug%></cite></footer>
+      </blockquote>
+    </li>
+  <% end %>
+  </ul>
+</div>
+<%
+  end
+%>
+</div>
