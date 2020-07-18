@@ -1,0 +1,16 @@
+current directory: /Users/agomez/code/sinatra-fwitter-group-project-onl01-seng-pt-100619/vendor/bundle/gems/bond-0.5.1/ext/readline_line_buffer
+/Users/agomez/.rbenv/versions/2.6.4/bin/ruby -I /Users/agomez/.rbenv/versions/2.6.4/lib/ruby/2.6.0 -r ./siteconf20200715-9211-bn4wrr.rb extconf.rb
+
+current directory: /Users/agomez/code/sinatra-fwitter-group-project-onl01-seng-pt-100619/vendor/bundle/gems/bond-0.5.1/ext/readline_line_buffer
+make "DESTDIR=" clean
+make: *** No rule to make target `clean'.  Stop.
+
+current directory: /Users/agomez/code/sinatra-fwitter-group-project-onl01-seng-pt-100619/vendor/bundle/gems/bond-0.5.1/ext/readline_line_buffer
+make "DESTDIR="
+echo "This is a dummy extension"
+This is a dummy extension
+
+current directory: /Users/agomez/code/sinatra-fwitter-group-project-onl01-seng-pt-100619/vendor/bundle/gems/bond-0.5.1/ext/readline_line_buffer
+make "DESTDIR=" install
+echo "This is a dummy extension"
+This is a dummy extension
