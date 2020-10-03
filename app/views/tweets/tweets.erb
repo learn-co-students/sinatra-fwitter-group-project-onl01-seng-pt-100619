@@ -1,0 +1,6 @@
+<h1>Welcome, <%= current_user.username %></h1>
+<% if @tweets %>
+  <% @tweets.each do |t| %>
+    <%= t.content %>
+  <% end %>
+<% end %>
