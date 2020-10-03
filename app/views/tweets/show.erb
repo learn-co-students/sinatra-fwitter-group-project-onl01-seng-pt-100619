@@ -1,0 +1,8 @@
+<%= @tweet.content %>
+ <form action="/tweets/<%= @tweet.id %>" method="POST">
+    <input type="hidden" id="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete Tweet"><br>
+  </form>
+   <form action="/tweets/<%= @tweet.id %>/edit" method="GET">
+    <input type="submit" value="Edit Tweet"><br>
+  </form>
